@@ -15,7 +15,7 @@ export function LayoutHomePage() {
       </main>
       <div></div>
       <div></div>
-      <Footer />
+      <Footer class_name="glass slide_up_to_down"/>
     </>
   )
 } 
