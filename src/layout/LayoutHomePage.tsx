@@ -1,3 +1,4 @@
+import { Footer } from "../modules/Footer";
 import { Header } from "../modules/Header";
 
 export function LayoutHomePage() {
@@ -14,10 +15,7 @@ export function LayoutHomePage() {
       </main>
       <div></div>
       <div></div>
-      <footer >
-        <nav>
-        </nav>
-      </footer>
+      <Footer />
     </>
   )
 } 
