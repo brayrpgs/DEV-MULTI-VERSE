@@ -135,6 +135,7 @@ body {
   height: 100dvh;
   margin: 0 !important;
   padding: 0 !important;
+  padding-bottom: 80px; 
 }
 
 .glass {
@@ -156,5 +157,37 @@ body {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  footer {
+    padding: 0.75rem;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 0.5rem;
+    min-height: 40px;
+    font-size: 0.9rem;
   }
 }

@@ -7,7 +7,11 @@ export function Footer({ class_name }: FooterProps) {
     <footer
       className={(class_name ? class_name : "")}
     >
-      hola este es el footer
+      <div style={{ textAlign: 'center', color: 'white' }}>
+        <p style={{ margin: '0', fontSize: '0.9rem' }}>
+          © 2024 DEVMULTIVERSE. Todos los derechos reservados.
+        </p>
+      </div>
     </footer>
   )
 }
