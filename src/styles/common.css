@@ -3,7 +3,7 @@
  * This file contains common colors and styles used across the application.
  ***************************************************/
 :root {
-  --background-default: linear-gradient(#66CCCC, #008888);
+  --background-default: linear-gradient(#008888, #008888);
 }
 
 /* variables de colores*/
@@ -132,10 +132,10 @@ body {
   background: var(--background-default);
   background-repeat: no-repeat;
   width: 100dvw;
-  height: 100dvh;
+  min-height: 100dvh;
   margin: 0 !important;
   padding: 0 !important;
-  padding-bottom: 80px; 
+  padding-bottom: 0; 
 }
 
 .glass {
@@ -160,34 +160,17 @@ body {
   }
 }
 
-/* Footer Styles */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  margin: 0;
-  padding: 1rem;
-  box-sizing: border-box;
+.slide_down_to_up {
+  animation: slide_down_to_up 1s cubic-bezier(0.46, 0.53, 0, 0.92);
 }
 
-/* Responsive Footer */
-@media (max-width: 768px) {
-  footer {
-    padding: 0.75rem;
-    min-height: 50px;
+@keyframes slide_down_to_up {
+  0% {
+    transform: translateY(100vh);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 480px) {
-  footer {
-    padding: 0.5rem;
-    min-height: 40px;
-    font-size: 0.9rem;
-  }
-}
