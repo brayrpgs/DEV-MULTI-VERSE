@@ -3,7 +3,8 @@
  * This file contains common colors and styles used across the application.
  ***************************************************/
 :root {
-  --background-default: linear-gradient(#66CCCC, #008888);
+  /*--background-default: linear-gradient(#008888, #008888);*/
+  --background-default: url(/src/assets/test.jpg);
 }
 
 /* variables de colores*/
@@ -132,9 +133,10 @@ body {
   background: var(--background-default);
   background-repeat: no-repeat;
   width: 100dvw;
-  height: 100dvh;
+  min-height: 100dvh;
   margin: 0 !important;
   padding: 0 !important;
+  padding-bottom: 0; 
 }
 
 .glass {
@@ -158,3 +160,18 @@ body {
     transform: translateY(0);
   }
 }
+
+.slide_down_to_up {
+  animation: slide_down_to_up 1s cubic-bezier(0.46, 0.53, 0, 0.92);
+}
+
+@keyframes slide_down_to_up {
+  0% {
+    transform: translateY(100vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
