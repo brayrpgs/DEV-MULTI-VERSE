@@ -1,3 +1,4 @@
+import { Footer } from "../modules/Footer";
 import { Header } from "../modules/Header";
 
 export function LayoutHomePage() {
@@ -10,14 +11,9 @@ export function LayoutHomePage() {
          */
       }
       <Header class_name="header_responsive glass slide_up_to_down" />
-      <main>
+      <main>        
       </main>
-      <div></div>
-      <div></div>
-      <footer >
-        <nav>
-        </nav>
-      </footer>
+      <Footer class_name="footer_responsive glass slide_down_to_up"/>
     </>
   )
 } 
