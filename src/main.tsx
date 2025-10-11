@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/loggin" element={<ErrorPage />} />
+        <Route path="/login" element={<ErrorPage />} />
         <Route path="/signin" element={<ErrorPage />} />
         {/**
          * This route will catch all unmatched paths and render the Error component.
