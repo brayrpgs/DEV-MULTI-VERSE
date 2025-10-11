@@ -6,4 +6,4 @@ const Test: React.FC = () => {
   )
 }
 
-export{ Test }
+export { Test }
