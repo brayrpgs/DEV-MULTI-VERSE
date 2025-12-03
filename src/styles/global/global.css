@@ -20,10 +20,13 @@
   --color-border-hover-fill: #005555;
   /** Primary Colors glass **/
   --color-primary-glass: transparent;
-  --color-secondary-glass: #ffffff6e;
+  --color-secondary-glass: #ffffff94;
+  --color-accent-glass: #ffffff;
+  --blur-primary-glass: blur(3px);
+  --blur-secondary-glass: blur(6px);
   /** Other Common Styles **/
-  --border-radius: 1rem;
-  --color-font-ligth: black;
+  --border-radius: .5rem;
+  --color-font-light: black;
   --color-font-dark: #ffffff;
 }
 
@@ -34,7 +37,7 @@
     * It is imported in the main entry point of the application.
 ****************************************************/
 * {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
   transition: all 1s ease-out;
 }
 
@@ -47,25 +50,80 @@ body {
   background-size: cover;
 }
 
-button.glass {
-  backdrop-filter: blur(3px);
+/****************************************************
+ * Glass Button Style
+ * This section contains styles for glass effect buttons.
+ ****************************************************/
+.glass {
+  backdrop-filter: var(--blur-primary-glass);
   color: var(--color-font-light);
   cursor: pointer;
-  background-color: transparent;
-  outline: .5px solid var(--color-border);
+  background: var(--color-primary-glass);
+  outline: .5px solid var(--color-secondary-glass);
   border-radius: var(--border-radius);
   border: none;
-  width: 100%;
+  interpolate-size: allow-keywords;
+  font-size: large;
+  margin: auto;
 }
 
-.slide_up_to_down {
-  animation: slide_up_to_down 1s cubic-bezier(0.46, 0.53, 0, 0.92);
+.glass:hover {
+  backdrop-filter: var(--blur-secondary-glass);
+  outline: .5px solid var(--color-accent-glass);
+  background: var(--color-secondary-glass);
 }
+
+.glass:active {
+  backdrop-filter: var(--blur-primary-glass);
+  transform: scale(0.95);
+}
+
+/****************************************************
+ * Fade Animations
+ * This section contains fade in and fade out animations.
+ ****************************************************/
+.fade_out_in {
+  animation: fade_out_in 1s cubic-bezier(0.46, 0.53, 0, 0.92);
+}
+
+.fade_in {
+  animation: fade_in 1s cubic-bezier(0.46, 0.53, 0, 0.92);
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade_out {
+  animation: fade_out 1s cubic-bezier(0.46, 0.53, 0, 0.92);
+}
+
+@keyframes fade_out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 
 /******************************************************
  * Slide Animations
  * This section contains slide up and slide down animations.
  ****************************************************/
+
+.slide_up_to_down {
+  animation: slide_up_to_down 1s cubic-bezier(0.46, 0.53, 0, 0.92);
+}
+
 @keyframes slide_up_to_down {
   0% {
     transform: translateY(-100vh);
