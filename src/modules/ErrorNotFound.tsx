@@ -1,5 +1,3 @@
-import "../styles/error.css"
-
 interface ErrorProps {
   class_name?: string;
   message?: string;

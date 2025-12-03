@@ -2,8 +2,8 @@ const Test: React.FC = () => {
   return (
     <div>
       <p>page for Test</p>
-      <button className="glass">Click me</button>
-      <input type="button" value="Click me" className="glass" />
+      <button className="glass success">Click me</button>
+      <input type="button" value="Click me" className="glass error" />
       <input type="checkbox" name="testCheckbox" id="" className="glass" />
       <input type="color" name="" id="" className="glass" />
       <input type="date" name="" id="" className="glass" />
@@ -25,6 +25,8 @@ const Test: React.FC = () => {
       <input type="time" name="" id="" className="glass" />
       <input type="url" name="" id="" className="glass" />
       <input type="week" name="" id="" className="glass" />
+      <hr className="glass"/>
+
     </div>
   )
 }

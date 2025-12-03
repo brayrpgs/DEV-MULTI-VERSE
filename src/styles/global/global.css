@@ -24,6 +24,11 @@
   --color-accent-glass: #ffffff;
   --blur-primary-glass: blur(2px);
   --blur-secondary-glass: blur(6px);
+  /** Status Colors **/
+  --success-color: green;
+  --error-color: red;
+  --info-color: blue;
+  --warning-color: yellow;
   /** Other Common Styles **/
   --border-radius: .5rem;
   --color-font-light: srgb 0 0 0;
@@ -65,13 +70,14 @@ body {
   border: none;
   interpolate-size: allow-keywords;
   margin: 1rem;
-  box-shadow: 2px 2px 4px 1px color( var(--color-font-light) / 0.5);
+  box-shadow: 2px 2px 4px 1px color(var(--color-font-light) / 0.5);
   font-size: var(--font-size-default);
 }
 
 
 
-.glass:hover , .glass:focus {
+.glass:hover,
+.glass:focus {
   backdrop-filter: var(--blur-secondary-glass);
   outline: .5px solid var(--color-accent-glass);
   background: var(--color-secondary-glass);
@@ -80,6 +86,23 @@ body {
 .glass:active {
   backdrop-filter: var(--blur-primary-glass);
   transform: scale(0.95);
+}
+
+/****************************************************
+ * Status Styles
+ * This section contains styles for different status types.
+ ****************************************************/
+.success {
+  background-color: rgb(from var(--success-color) r g b / 50%);
+}
+.error {
+  background-color: rgb(from var(--error-color) r g b / 50%);
+}
+.info {
+  background-color: rgb(from var(--info-color) r g b / 50%);
+}
+.warning {
+  background-color: rgb(from var(--warning-color) r g b / 50%);
 }
 
 /****************************************************
