@@ -1,3 +1,5 @@
+import { Theme } from "../components/theme/Theme"
+
 const Test: React.FC = () => {
   return (
     <div>
@@ -26,6 +28,7 @@ const Test: React.FC = () => {
       <input type="url" name="" id="" className="glass" />
       <input type="week" name="" id="" className="glass" />
       <hr className="glass"/>
+      <Theme />
 
     </div>
   )
