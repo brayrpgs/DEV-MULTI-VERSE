@@ -3,4 +3,4 @@ enum Theme {
   Dark = "dark"
 }
 
-export {Theme}
+export { Theme }
